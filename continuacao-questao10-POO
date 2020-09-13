@@ -1,0 +1,51 @@
+package quest10;
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner (System.in);
+        System.out.println("Nome:");
+        int nomesDosClientes = teclado.nextInt();
+        System.out.println("Marca:");
+        int marcasDoProduto = teclado.nextInt();
+        System.out.println("Lote:");
+        int lotesDoProduto = teclado.nextInt();
+        System.out.println("Compra:");
+        int comprasDosProdutos = teclado.nextInt();
+        System.out.println("Preço:");
+        int precosDosProdutos = teclado.nextInt();
+
+        Cadastrarproduto produto = new Cadastrarproduto (nomesDosClientes,marcasDoProduto,lotesDoProduto,comprasDosProdutos,precosDosProdutos);
+
+        int opcoes=0;
+
+             
+            while(opcoes<=3) {
+
+            
+            System.out.print("Atualizar Dados");
+            System.out.print("produto:");
+            System.out.print("Sair");
+            System.out.print("opçao");
+            if(opcoes==1) {
+                System.out.print("deseja alterar valor?:");
+                String dados=teclado.nextLine();
+                System.out.println("Qual o valor?:");
+                String valorNovo = teclado.nextLine();
+                }  else if (opcoes==2) {
+                    System.out.println("informe o produto:");
+                } else if (opcoes==3){
+                    System.out.print("Sair do programa");
+                } else {
+                    System.out.println("Valor invalido");
+                }
+                
+            }
+
+            
+        }
+
+        
+    }
+    
+}
